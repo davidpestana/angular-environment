@@ -1,0 +1,21 @@
+services:
+  angular-legacy:
+    build:
+      context: ./build/angular-legacy
+    working_dir: /app
+    volumes:
+      - ./source:/app
+    ports:
+      - 4200:4200
+    command: ['bash']
+
+
+  angular-latest:
+    build:
+      context: ./build/angular-latest
+    working_dir: /app
+    volumes:
+      - ./source:/app
+    ports:
+      - 4200:4200
+    command: ['bash']
