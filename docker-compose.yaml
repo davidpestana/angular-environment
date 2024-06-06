@@ -19,3 +19,13 @@ services:
     ports:
       - 4200:4200
     command: ['bash']
+
+  ionic:
+    build:
+      context: ./build/ionic
+    working_dir: /app
+    volumes:
+      - ./source:/app
+    ports:
+      - 4200:4200
+    command: ['bash']
